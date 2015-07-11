@@ -1,0 +1,30 @@
+{
+  "name": "Clickrammer",
+  "version": "0.0.1",
+  "homepage": "https://github.com/Redpoint1/Clickrammer",
+  "authors": [
+    "Richard Rožár <redpoints1@gmail.com>"
+  ],
+  "description": "Javascript based clicker game",
+  "main": "src/index.html",
+  "install" : {
+    "path" : "/src/bower_components"
+  },
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "clicker",
+    "clickrammer",
+    "game"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
