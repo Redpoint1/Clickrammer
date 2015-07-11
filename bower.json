@@ -7,8 +7,8 @@
   ],
   "description": "Javascript based clicker game",
   "main": "src/index.html",
-  "install" : {
-    "path" : "/src/bower_components"
+  "install": {
+    "path": "/src/bower_components"
   },
   "moduleType": [
     "globals",
@@ -22,9 +22,14 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
-    "node_modules",
-    "bower_components",
+    "src/node_modules",
+    "src/bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "angular-sanitize": "~1.4.2",
+    "angular": "~1.4.2",
+    "bootstrap": "~3.3.5"
+  }
 }
