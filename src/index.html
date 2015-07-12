@@ -1,14 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="game">
 <head>
   <meta charset="UTF-8">
   <title>Clickrammer</title>
+
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=7">
+  <meta name="author" content="Richard Rožár">
+  <meta name="keywords" content="clickrammer, click, game">
+  <meta name="description" content="Clicker game based on Javascript">
+
   <link rel="stylesheet" href="assets/css/bootstrap.css">
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular/angular-sanitize/angular-sanitize.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script type="application/javascript" src="bower_components/angular/angular.js"></script>
+  <script type="application/javascript" src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script type="application/javascript" src="assets/js/clickrammer.js"></script>
 </head>
 <body>
-  <div class="container-fluid">
+  <div class="container-fluid" ng-controller="MainCtrl">
     <div class="row">
       <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -17,14 +27,13 @@
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li><a>Projects</a></li>
-              <li><a>Languages</a></li>
-              <li><a>Skills</a></li>
-              <li><a>Upgrades</a></li>
-              <li><a>Settings</a></li>
+              <li><a ng-click="setPage('projects')">Projects</a></li>
+              <li><a ng-click="setPage('languages')">Languages</a></li>
+              <li><a ng-click="setPage('skills')">Skills</a></li>
+              <li><a ng-click="setPage('upgrades')">Upgrades</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a><span class="glyphicon glyphicon-cog"></span></a></li>
+              <li><a ng-click="setPage('settings')"><span class="glyphicon glyphicon-cog"></span></a></li>
             </ul>
           </div>
         </div>
@@ -39,7 +48,7 @@
       </div>
       <div class="col-sm-9">
         <div class="row">
-          <div class="col-sm-12">
+          <div class="col-sm-12" ng-include="page">
             include parts
           </div>
         </div>
