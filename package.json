@@ -1,0 +1,29 @@
+{
+  "name": "Clickrammer",
+  "version": "0.0.1",
+  "description": "Javascript based game",
+  "main": "./assets/js/clickrammer.js",
+  "dependencies": {
+    "less": "^2.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Redpoint1/Clickrammer.git"
+  },
+  "keywords": [
+    "clicker",
+    "game",
+    "click",
+    "mouse"
+  ],
+  "author": "Richard Rožár",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Redpoint1/Clickrammer/issues"
+  },
+  "homepage": "https://github.com/Redpoint1/Clickrammer"
+}

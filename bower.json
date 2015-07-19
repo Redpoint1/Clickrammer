@@ -6,10 +6,7 @@
     "Richard Rožár <redpoints1@gmail.com>"
   ],
   "description": "Javascript based clicker game",
-  "main": "src/index.html",
-  "install": {
-    "path": "/src/bower_components"
-  },
+  "main": "index.html",
   "moduleType": [
     "globals",
     "node"
@@ -29,6 +26,7 @@
   ],
   "dependencies": {
     "angular-sanitize": "~1.4.2",
-    "angular": "~1.4.2"
+    "angular": "~1.4.2",
+    "bootstrap": "~3.3.5"
   }
 }

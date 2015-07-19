@@ -3,62 +3,48 @@
  * Copyright 2015 Richard Rožár
  * Licensed under the MIT license
  */
-
 /* Bootstrap */
-
 .progress {
   position: relative;
   height: 25px;
 }
-
-.progress div, .progress span {
+.progress div,
+.progress span {
   line-height: 25px;
 }
-
 .progress-bar {
   line-height: 25px;
 }
-
 .media {
   background-color: #4e5d6c;
 }
-
 /* Custom */
-
 .margin-left {
   margin-left: 10px;
 }
-
 .margin-right {
   margin-right: 10px;
 }
-
 .padding-left {
   padding-left: 10px;
 }
-
 .absolute {
   position: absolute;
   left: 0;
 }
-
 .block-right {
   right: 0;
   left: inherit;
 }
-
 .float-right {
-  float:right;
+  float: right;
 }
-
 .full-margin-bottom {
   margin-bottom: 30px;
 }
-
 .half-margin-bottom {
   margin-bottom: 15px;
 }
-
 /* Clickrammer */
 .logo {
   width: 100px;
