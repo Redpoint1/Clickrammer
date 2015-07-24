@@ -27,6 +27,7 @@
   "dependencies": {
     "angular-sanitize": "~1.4.2",
     "angular": "~1.4.2",
-    "bootstrap": "~3.3.5"
+    "bootstrap": "~3.3.5",
+    "ngstorage": "~0.3.7"
   }
 }
