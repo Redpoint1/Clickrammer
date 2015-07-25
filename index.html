@@ -43,8 +43,8 @@
     </div>
     <div class="row">
       <div class="col-sm-3 text-center half-margin-bottom">
-          <strong><span>10</span> lines</strong>
-          <button class="btn btn-default btn-block">Code!</button>
+          <strong><span>{{user.data.lines}}</span> lines</strong>
+          <button class="btn btn-default btn-block" ng-click="user.click()">Code!</button>
       </div>
       <div class="col-sm-9" ng-include="page"></div>
     </div>

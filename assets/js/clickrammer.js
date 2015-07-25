@@ -34,9 +34,35 @@
 
   var clickrammer = angular.module("game", ['ngStorage']);
 
-  clickrammer.controller("MainCtrl", ['$scope', function($scope) {
-    $scope.page = 'templates/projects.html'; //default
+  clickrammer.factory("User", ['$localStorage', function($localStorage){
+    function User(){
+      this.load();
+    }
 
+    User.prototype = {
+      data: $localStorage,
+
+      load: function(){
+        this.data.$default({
+          lines : 0,
+          languages: []
+        });
+      },
+      
+      click: function(){
+        this.data.lines++;
+      }
+    }
+
+    return User;
+
+  }]);
+
+  clickrammer.controller("MainCtrl", ['$scope', 'User', function($scope, User) {
+
+    $scope.user = new User();
+
+    $scope.page = 'templates/projects.html'; //default
     $scope.setPage = function(page) {
       $scope.page = 'templates/'+page+'.html';
     }
