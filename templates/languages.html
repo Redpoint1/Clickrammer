@@ -1,5 +1,5 @@
 <div class="row" ng-controller="LanguageCtrl">
-  <div class="col-sm-12 col-lg-6 half-margin-bottom" ng-repeat="language in languages">
+  <div class="col-sm-12 col-lg-6 half-margin-bottom" ng-repeat="language in game.data.languages">
     <div class="media language">
       <div class="media-left media-middle padding-left">
         <img class="media-object logo" ng-src="./assets/images/logos/{{language.logo}}" alt="{{language.name}}">

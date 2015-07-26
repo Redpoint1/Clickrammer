@@ -1,4 +1,10 @@
-var languages = [
+/*
+ * Clickrammer (https://github.com/Redpoint1/Clickrammer)
+ * Copyright 2015 Richard Rožár
+ * Licensed under the MIT license
+ */
+
+var _languages = [
   {
     id: "html",
     name: "HTML",

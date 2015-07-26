@@ -48,7 +48,7 @@
           languages: []
         });
       },
-      
+
       click: function(){
         this.data.lines++;
       }
@@ -58,9 +58,28 @@
 
   }]);
 
-  clickrammer.controller("MainCtrl", ['$scope', 'User', function($scope, User) {
+  clickrammer.factory("Game", ['$sessionStorage', function($sessionStorage){
+    function Game(){
+      this.start();
+    }
+
+    Game.prototype = {
+      data : $sessionStorage,
+
+      start: function(){
+        this.data.$default({
+          languages: [for (lang of _languages) new Language(lang)]
+        });
+      }
+    }
+
+    return Game;
+  }]);
+
+  clickrammer.controller("MainCtrl", ['$scope', 'Game', 'User', function($scope, Game, User) {
 
     $scope.user = new User();
+    $scope.game = new Game();
 
     $scope.page = 'templates/projects.html'; //default
     $scope.setPage = function(page) {
@@ -70,10 +89,6 @@
   }]);
 
   clickrammer.controller("LanguageCtrl", ['$scope', function($scope) {
-    $scope.languages = [
-      new Language(languages[0]),
-      new Language(languages[1])
-    ]
 
   }]);
 
