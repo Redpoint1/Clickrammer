@@ -1,5 +1,5 @@
-<div class="row" ng-controller="LanguageCtrl">
-  <div class="col-sm-12 col-lg-6 half-margin-bottom" ng-repeat="language in languages">
+<div class="row">
+  <div class="col-sm-12 col-lg-6 half-margin-bottom" ng-repeat="(id, language) in user.data.languages">
     <div class="media language">
       <div class="media-left media-middle padding-left">
         <img class="media-object logo" ng-src="./assets/images/logos/{{language.logo}}" alt="{{language.name}}">
@@ -7,7 +7,7 @@
       <div class="media-body">
         <h4>{{language.name}}</h4>
         <p>{{language.description}}</p>
-        <p><a href="#" class="btn btn-success" role="button">Learn</a></p>
+        <p><a href="#" class="btn btn-success" role="button" ng-show="language.canBeLearned(user)">Learn</a></p>
       </div>
     </div>
   </div>
